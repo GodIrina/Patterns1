@@ -1,19 +1,16 @@
-package ru.netology.delivery.Test;
+package ru.netology.delivery.test;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
-import ru.netology.delivery.Data.DataGenerator;
-import ru.netology.delivery.Data.User;
+import ru.netology.delivery.data.DataGenerator;
+import ru.netology.delivery.data.User;
 
 import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
-import static ru.netology.delivery.Data.DataGenerator.generateDate;
+import static ru.netology.delivery.data.DataGenerator.generateDate;
 
 public class DeliveryFormTest {
 
