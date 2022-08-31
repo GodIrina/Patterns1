@@ -29,7 +29,7 @@ public class DeliveryFormTest {
         String initialDate = generateDate(3);
         String newDate = generateDate(7);
         $x("//*[@data-test-id='city']//input").val(user.getCity());
-        $x("//*[@data-test-id='date']//input").doubleClick().sendKeys("BackSpace");
+        $x("//*[@data-test-id='date']//input").sendKeys(Keys.chord(Keys.SHIFT,Keys.HOME),Keys.BACK_SPACE);
         $x("//*[@data-test-id='date']//input").val(initialDate);
         $x("//*[@data-test-id='name']//input").val(user.getName());
         $x("//*[@data-test-id='phone']//input").val(user.getPhone());
@@ -39,7 +39,7 @@ public class DeliveryFormTest {
                 + "успешно запланирована на " + initialDate), Duration.ofSeconds(10)).shouldBe(visible);
         refresh();
         $x("//*[@data-test-id='city']//input").val(user.getCity());
-        $x("//*[@data-test-id='date']//input").doubleClick().sendKeys("BackSpace");
+        $x("//*[@data-test-id='date']//input").sendKeys(Keys.chord(Keys.SHIFT,Keys.HOME),Keys.BACK_SPACE);
         $x("//*[@data-test-id='date']//input").val(newDate);
         $x("//*[@data-test-id='name']//input").val(user.getName());
         $x("//*[@data-test-id='phone']//input").val(user.getPhone());
@@ -55,7 +55,7 @@ public class DeliveryFormTest {
         User user = DataGenerator.Registration.generateUser("ru");
         String date = generateDate(3);
         $x("//*[@data-test-id='city']//input").val(user.getCity());
-        $x("//*[@data-test-id='date']//input").doubleClick().sendKeys("BackSpace");
+        $x("//*[@data-test-id='date']//input").sendKeys(Keys.chord(Keys.SHIFT,Keys.HOME),Keys.BACK_SPACE);
         $x("//*[@data-test-id='date']//input").val(date);
         $x("//*[@data-test-id='name']//input").val(user.getName());
         $x("//*[@data-test-id='phone']//input").val(user.getPhone());
